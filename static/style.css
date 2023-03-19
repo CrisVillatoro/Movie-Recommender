@@ -1,0 +1,176 @@
+h1{color:rgb(255, 255, 255);
+font-size: 60px;
+font-style: normal;}
+
+body{
+    margin:auto;
+    padding:30px;
+    text-align:center;
+    font-size: small;
+    font-family: Alfa Slab One;
+    background-color: bisque;
+    background-image: url("background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+} 
+.test{
+    color:rgb(255, 255, 253);
+    width:80%;
+    margin:auto;
+    padding:30px;
+    text-align:center;
+    font-size:medium;
+    font-family: Alfa Slab One;
+    background-color: bisque;
+    background-image: url("background_recommender.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+input{
+    background-color:silver;
+    padding: 15px;
+    font-size:medium;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    outline-color: rgb(14, 13, 15);
+}
+.submit{
+    background-color:rgb(201, 191, 118);
+    padding: 20px;
+    font-size:medium;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    outline-color: rgb(14, 13, 15);
+
+}
+
+input{color:rgb(25, 25, 23);
+font-style:initial;
+font-size: 20px;
+transition: all 3s;}
+
+button:hover{color: brown;}
+
+input[type=number]{width:80px}
+
+ul{
+    display: inline-block;
+    text-align: left;
+    }
+
+.movies li{padding: 20px;} class selector
+
+.movies li:nth-child(odd){background-color: grey;}  :nth-child() is pseudo selector
+.movies li:nth-child(even){background-color: white;}
+
+a{color: darkblue;
+transition: all 3s;
+font-size: 20px;
+font-style: normal;}
+
+a:hover{color: brown;}
+
+img{height: 30vh;
+    transition: all 2s;}
+
+img:hover{
+    filter: grayscale();
+    filter:blur(2px)*/;
+    filter: brightness(20%);*/
+    transform: rotate(5deg) scale(1.2);}
+
+
+p,h2{color: rgb(245, 251, 251);
+font-size: 20px;} 
+
+  .model {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 16px;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    width: 200px;
+  }
+  
+  .model option {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 14px;
+    color: #333;
+    background-color: #e0e24a;
+  }
+
+  .rating {
+    display: inline-block;
+    font-size: 36px;
+  }
+  
+  .rating input {
+    display: none;
+  }
+  
+  .rating label {
+    color: #ddd;
+    float: right;
+    cursor: pointer;
+  }
+  
+  .rating label:hover,
+  .rating label:hover ~ label {
+    color: #FFD700;
+  }
+  
+  .rating input:checked ~ label {
+    color: #FFD700;
+  }
+  
+  .submit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .submit:hover {
+    background-color: #45a049;
+  }
+  .movie-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.movie-box .rating {
+  margin-inline:  10px;
+}
+
+.movie-posters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.movie-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.movie-col h2 {
+  margin-bottom: 5px;
+}
+
+.movie-col img {
+  width: 200px;
+  height: 300px;
+}

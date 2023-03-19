@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <h1>Movie <br/> {{name}}</h1>
+    <p>Please select a recommendation model and enter <br/> three movies along with your rating of each movie.</p>
+    <br><br>
+    <form action="/movies">
+    <select name="option" class ="model">
+        <option name="Random">Random</option>
+        <option name="NMF">NMF</option>
+        <option name="Cosine Similarity">Cosine Similarity</option>
+    </select>
+    <br><br>
+    {%for box in range(3)%}
+    <div class="movie-box">
+        <input name="title" type="text" placeholder="Enter movies" list="movies_list">
+        <div class="rating">
+            <input type="radio" id="5stars{{box}}" name="rating{{box}}" value="5">
+            <label for="5stars{{box}}">&#9733;</label>
+            <input type="radio" id="4stars{{box}}" name="rating{{box}}" value="4">
+            <label for="4stars{{box}}">&#9733;</label>
+            <input type="radio" id="3stars{{box}}" name="rating{{box}}" value="3">
+            <label for="3stars{{box}}">&#9733;</label>
+            <input type="radio" id="2stars{{box}}" name="rating{{box}}" value="2">
+            <label for="2stars{{box}}">&#9733;</label>
+            <input type="radio" id="1star{{box}}" name="rating{{box}}" value="1">
+            <label for="1star{{box}}">&#9733;</label>
+        </div>
+    </div>
+    <br><br>
+    {% endfor %}
+    <br>
+    <input type="submit" value="Show Recommendations" class = "submit">
+    </form>
+    <!-- <a href="/movies">Go to next page</a> -->
+
+    <datalist id="movies_list">
+        {%for movie in movies%}
+        <option>{{movie}}</option>
+        {%endfor%}
+    </datalist>
+
+</body>
+</html>

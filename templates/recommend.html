@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendations</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body class="test">
+    <h1>Movie <br/> Recommendations</h1>
+    <div>
+        <div class="movie-posters">
+            {% for i in range(0, recommendation|length,6) %}
+              <div class="movie-row">
+                {% for j in range(i, i+6) %}
+                  {% if j < recommendation|length %}
+                    <div class="movie-col">
+                      <h2>{{ recommendation[j] }}</h2>
+                      <img src="{{ poster_links[j] }}" alt="{{ recommendation[j] }} poster">
+                    </div>
+                  {% endif %}
+                {% endfor %}
+                <br><br>
+              </div>
+            {% endfor %}
+          </div>
+    <br><br>
+    <a href="/">Go back to main page</a>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+        var end = Date.now() + (40 * 1000);
+
+            // go Buckeyes!
+            var colors = ['#bb0000', '#ffffff'];
+
+            (function frame() {
+                confetti({
+                    particleCount: 2,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 },
+                    colors: colors
+                });
+                confetti({
+                    particleCount: 2,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 },
+                    colors: colors
+                });
+
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            }());
+    </script>
+</body>
+</html>
