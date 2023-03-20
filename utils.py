@@ -14,7 +14,7 @@ import numpy as np
 
 import tmdbsimple as tmdb
 
-tmdb.API_KEY = '0bf69a28ee0108f01839a18c66bf4d73'
+#tmdb.API_KEY = '########'
 
 movies = pd.read_csv('movies_list.csv')
 
