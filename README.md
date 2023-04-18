@@ -1,4 +1,6 @@
-# Movie-Recommender
+# Movie Recommender
+
+The project involves building a movie recommender with a web interface. The recommender engine will use two distinct recommendation models: the Negative Matrix Factorization (NMF) algorithm and a user-based cosine similarity matrix recommender algorithm. The latter selects the top 10 users who have the most similar movie preferences and then creates a new movie vector from their average ratings. This helps to recommend movies that the new similar user is more likely to appreciate.
 
 Render-Link: https://cristas-movie-recommender-mmhl.onrender.com
 
